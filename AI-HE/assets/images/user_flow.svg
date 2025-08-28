@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <!-- 背景 -->
+  <rect width="800" height="400" fill="#f1f8e9" rx="10" ry="10" />
+  
+  <!-- 标题 -->
+  <text x="400" y="40" font-family="Arial" font-size="24" text-anchor="middle" fill="#2E8B57" font-weight="bold">不背单词App用户流程图</text>
+  
+  <!-- 流程步骤 -->
+  <!-- 步骤1：学习任务 -->
+  <rect x="50" y="100" width="120" height="60" fill="#ffffff" stroke="#2E8B57" stroke-width="2" rx="10" ry="10" />
+  <text x="110" y="135" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">学习任务</text>
+  
+  <!-- 步骤2：社交裂变 -->
+  <rect x="250" y="100" width="120" height="60" fill="#ffffff" stroke="#2E8B57" stroke-width="2" rx="10" ry="10" />
+  <text x="310" y="135" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">社交裂变</text>
+  
+  <!-- 步骤3：获得酷币 -->
+  <rect x="450" y="100" width="120" height="60" fill="#ffffff" stroke="#2E8B57" stroke-width="2" rx="10" ry="10" />
+  <text x="510" y="135" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">获得酷币</text>
+  
+  <!-- 步骤4：进入积分商城 -->
+  <rect x="650" y="100" width="120" height="60" fill="#ffffff" stroke="#2E8B57" stroke-width="2" rx="10" ry="10" />
+  <text x="710" y="135" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">进入积分商城</text>
+  
+  <!-- 步骤5：兑换/下单 -->
+  <rect x="650" y="220" width="120" height="60" fill="#ffffff" stroke="#2E8B57" stroke-width="2" rx="10" ry="10" />
+  <text x="710" y="255" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">兑换/下单</text>
+  
+  <!-- 步骤6：混合支付 -->
+  <rect x="450" y="220" width="120" height="60" fill="#ffffff" stroke="#2E8B57" stroke-width="2" rx="10" ry="10" />
+  <text x="510" y="255" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">混合支付</text>
+  
+  <!-- 步骤7：发货/虚拟直充 -->
+  <rect x="250" y="220" width="120" height="60" fill="#ffffff" stroke="#2E8B57" stroke-width="2" rx="10" ry="10" />
+  <text x="310" y="255" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">发货/虚拟直充</text>
+  
+  <!-- 步骤8：使用 -->
+  <rect x="50" y="220" width="120" height="60" fill="#ffffff" stroke="#2E8B57" stroke-width="2" rx="10" ry="10" />
+  <text x="110" y="255" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">使用</text>
+  
+  <!-- 步骤9：评价分享得积分 -->
+  <rect x="50" y="340" width="120" height="60" fill="#ffffff" stroke="#2E8B57" stroke-width="2" rx="10" ry="10" />
+  <text x="110" y="365" font-family="Arial" font-size="12" text-anchor="middle" fill="#333333">评价分享</text>
+  <text x="110" y="385" font-family="Arial" font-size="12" text-anchor="middle" fill="#333333">得积分</text>
+  
+  <!-- 连接箭头 -->
+  <!-- 水平箭头 -->
+  <line x1="170" y1="130" x2="240" y2="130" stroke="#2E8B57" stroke-width="2" />
+  <polygon points="240,130 230,125 230,135" fill="#2E8B57" />
+  
+  <line x1="370" y1="130" x2="440" y2="130" stroke="#2E8B57" stroke-width="2" />
+  <polygon points="440,130 430,125 430,135" fill="#2E8B57" />
+  
+  <line x1="570" y1="130" x2="640" y2="130" stroke="#2E8B57" stroke-width="2" />
+  <polygon points="640,130 630,125 630,135" fill="#2E8B57" />
+  
+  <line x1="570" y1="250" x2="640" y2="250" stroke="#2E8B57" stroke-width="2" />
+  <polygon points="640,250 630,245 630,255" fill="#2E8B57" />
+  
+  <line x1="370" y1="250" x2="440" y2="250" stroke="#2E8B57" stroke-width="2" />
+  <polygon points="440,250 430,245 430,255" fill="#2E8B57" />
+  
+  <line x1="170" y1="250" x2="240" y2="250" stroke="#2E8B57" stroke-width="2" />
+  <polygon points="240,250 230,245 230,255" fill="#2E8B57" />
+  
+  <!-- 垂直箭头 -->
+  <line x1="710" y1="160" x2="710" y2="210" stroke="#2E8B57" stroke-width="2" />
+  <polygon points="710,210 705,200 715,200" fill="#2E8B57" />
+  
+  <line x1="110" y1="280" x2="110" y2="330" stroke="#2E8B57" stroke-width="2" />
+  <polygon points="110,330 105,320 115,320" fill="#2E8B57" />
+  
+  <!-- 回环箭头 -->
+  <path d="M170,370 Q400,450 650,370 Q680,360 680,330 Q680,290 650,280" fill="none" stroke="#2E8B57" stroke-width="2" />
+  <polygon points="650,280 655,290 645,290" fill="#2E8B57" />
+  
+  <!-- 文字提示 -->
+  <text x="400" y="320" font-family="Arial" font-size="16" text-anchor="middle" fill="#2E8B57">用户流程图占位图</text>
+</svg>
