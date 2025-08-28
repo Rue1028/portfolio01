@@ -1,0 +1,752 @@
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Inter', 'Noto Sans SC', 'Segoe UI', sans-serif;
+    color: #333;
+    line-height: 1.5;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 通用容器 - Apple 风格宽度 */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* 通用部分样式 */
+section {
+    padding: 80px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font: size 56px;
+    font-weight: 00;
+    color: #1d1d1f;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #1d1d1f;
+}
+
+.section-header p {
+    font-size: 17px;
+    color: #666;
+}
+
+/* 按钮样式 */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 24px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.primary-btn {
+    background-color: #2E8B57;
+    color: #fff;
+}
+
+.primary-btn:hover {
+    background-color: #3CB371;
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: #2E8B57;
+    border: 2px solid #2E8B57;
+    border-radius: 9999px; /* 超大圆角形成胶囊形状 */
+    padding: 6px 16px;   /* 适当增加水平内边距以保持比例 */
+    font-weight: 500;     /* 苹果按钮更突出 */
+}
+
+.secondary-btn:hover {
+    background-color: #2E8B57;
+    color: #fff;
+    transition: color 0.2s ease;;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 导航栏 */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #1d1d1f;
+    text-decoration: none;
+    white-space: nowrap; 
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 48px;  
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-left: 30px;
+}
+
+.nav-menu li a {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    justify-content: center; 
+    position: relative;
+    font-weight: 500;
+    text-decoration: none;
+    color: #1d1d1f;
+    padding: 6px 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2E8B57;
+    transition: width 0.3s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+    color: #2E8B57;
+}
+
+.nav-menu li a:hover::after,
+.nav-menu li a.active::after {
+    width: 100%;
+}
+
+
+/* 汉堡按钮 */
+.hamburger {
+    display: none; /* 默认隐藏 PC端 */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #2E8B57;
+    border-radius: 2px;
+}
+
+/* 移动端样式 */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #fff;
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* 首页概览 */
+.hero-section {
+    padding-top: 150px;
+    padding-bottom: 80px;
+    background-color: #fff;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.hero-text h1 {
+    font-size: 80px;
+    font-weight: 700;
+    color: #1d1d1f;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+}
+
+.hero-text .subtitle {
+    font-size: 28px;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 32px;
+    letter-spacing: -0.01em
+}
+
+.hero-text .description {
+    font-size: 21px;
+    font-weight: 400;
+    color: #1d1d1f;
+    line-height: 1.4;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ .skills {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.skill-tag {
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.hero-text .description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.hero-image {
+    flex: flex;
+    justify-content: flex-end;
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 作品集 */
+.projects-section {
+  padding: 80px 0;
+  background: #fff;
+  text-align: center;
+  background-color: #f5f5f7
+}
+
+.section-header p {
+  margin-bottom: 50px; 
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #1d1d1f;
+}
+
+
+/* 三列网格布局 */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* PC 端三列 */
+  gap: 40px;
+}   
+
+.project-card {
+  background: #fff;
+  padding: 20px;
+  padding-bottom: 60px;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left; 
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.project-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #86868b;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* 按钮在卡片里保持一致 */
+.project-card .btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+/* 移动端响应式：小屏幕改为一列 */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* 联系部分 */
+.contact-section {
+    background-color: #fff;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease;
+}
+
+.contact-item {
+    background-color:#f5f5f7;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item i {
+    font-size: 2.5rem;
+    color: #1d1d1f;
+    margin-bottom: 15px;
+}
+
+.contact-item h4 {
+    font-size: 21px;
+    color: #1d1d1f;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.contact-item p {
+    font-size: 17px;
+    font-weight: 400;
+    color: #86868b;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.qrcode {
+    width: 150px;
+    height: 150px;
+    margin: 15px auto;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.qrcode:hover {
+     transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.wechat-id {
+    margin-top: 10px !important;
+}
+
+.contact-form {
+    background-color: #f5f5f7;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.contact-form h3 {
+    font-size: 32px;
+    color: #1d1d1f;
+    font-weight: 700;
+    margin: 0;
+    padding: 25px 25px 15px 25px;
+    border-bottom: 1px solid #e1e1e1;
+    background: linear-gradient(135deg, #f8f9fa 0%, #f5f5f7 100%);
+}
+
+.form-content {
+    padding: 20px 25px 25px 25px;
+}
+
+.info-item {
+    margin-bottom: 25px;
+}
+
+.info-item:last-of-type {
+    margin-bottom: 30px;
+}
+
+.info-item h4 {
+    color: #1d1d1f;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.info-item p {
+    color: #86868b;
+    font-size: 17px;
+    margin: 0;
+}
+
+/* 下载按钮 */
+.resume-download {
+    text-align: center;
+}
+
+.btn-submit {
+        background-color: #2E8B57;
+        color: #fff;
+        padding: 14px 40px;      /* 更宽的左右内边距 */
+        border: none;
+        border-radius: 9999px;   /* 保持圆角 */
+        font-size: 1rem;
+        font-weight: 600;        /* 字重更突出，符合 Apple 视觉 */
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-block;   /* 使按钮按内容自适应宽度 */
+        width: auto;             /* 取消 100% 宽度 */
+}
+
+.btn-submit:hover {
+        background-color: #3CB371;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 9999px;   /* 保持圆角 */
+        padding: 14px 40px;      /* 更宽的左右内边距 */
+        display: inline-block;   /* 使按钮按内容自适应宽度 */
+        width: auto;             /* 取消 100% 宽度 */
+        font-weight: 600;        /* 字重更突出，符合 Apple 视觉 */
+}
+
+/* 页脚 - 极简 */
+.footer {
+    background-color: #f5f5f7;
+    padding: 40px 0 24px; /* 原 80px 0 36px，减少上下内边距 */
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.copyright p {
+    font-size: 12px;
+    color: #86868b;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .user-groups,
+    .goals,
+    .highlights {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .architecture-diagram {
+        grid-template-columns: 1fr;
+    }
+
+    .app-modules {
+        grid-template-columns: 1fr;
+    }
+
+    .flow-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .prototypes-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 48px;
+            margin: 0;
+            padding: 0;
+        }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 0 0 20px 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+    }
+
+    .hero-text {
+        padding-right: 0;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .skills {
+        justify-content: center;
+    }
+
+    .user-groups,
+    .goals,
+    .architecture-notes,
+    .highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .wireframes-gallery,
+    .demo-videos,
+    .demo-gifs {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .copyright {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+}
+
+/* 淡入动画 */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 占位图样式 */
+.placeholder-image {
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* 模态框遮罩 */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* 大图 */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  animation: zoomIn 0.3s ease;
+}
+
+/* 关闭按钮 */
+.close {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.close:hover {
+    opacity: 0.7;
+}
+
+/* 二维码悬停效果 */
+.qrcode {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.qrcode:hover {
+    transform: scale(1.05);
+}
+
+/* 动画 */
+@keyframes zoomIn {
+  from {transform: scale(0.7);}
+  to {transform: scale(1);}
+}
+
